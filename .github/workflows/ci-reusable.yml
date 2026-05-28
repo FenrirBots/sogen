@@ -15,7 +15,16 @@ on:
         required: false
         type: string
         default: "false"
-
+  workflow_dispatch:
+    inputs:
+      verbose:
+        description: "Enable verbose logging during tests"
+        type: choice
+        required: false
+        default: "false"
+        options:
+          - "true"
+          - "false"
 permissions:
   contents: read
   actions: write
